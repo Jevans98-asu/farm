@@ -35,6 +35,7 @@ Add to your CSS Under Imported Fonts
 
 * {
     box-sizing: border-box;
+    padding: 0;
     margin: 0;
 }
 
@@ -47,54 +48,68 @@ body {
     font-size: 1.25em;
 }
 
-header, footer{
+header, footer {
+    width: 100%;
     background-color: #06A816;
     color: #ffffff;
     text-align: center;
 }
 
 nav ul {
-    margin-left: -40px;
     background-color: #ffffff;
+    padding: 40px;
 }
 
 nav a {
     color: #ffffff;
-    margin: 10px;
+    margin: 10px 40px;
     padding: 10px;
     display: block;
     text-decoration: none;
     background-color: #E75D02;
+    border-radius: 5px;
+
 }
 
 nav li {
     list-style: none;
+    border: #ffffff;
 }
 
-footer p{
+footer p {
     background-color: #ffffff;
     color: #06A816;
 }
 
 header p {
     font-style: italic;
+    padding-bottom: 20px;
 }
 
-.secondary {
-    text-align: center;
-}
-
-h1, h2, h3{
+h1, h2, h3 {
     font-family: 'Irish Grover';
     padding: 10px;
 }
 
+h1, h2, h3, p, img {
+    padding: 10px;
+}
+
 h1 {
+    text-shadow: 3px 3px #000000;
     font-size: 2.5em;
 }
 
 h2 {
     font-size: 1.75em;
+}
+
+p {
+    font-weight: bold;
+}
+
+.secondary {
+    text-align: center;
 }
 
 /* Media Queries */
