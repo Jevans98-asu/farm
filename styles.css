@@ -183,7 +183,7 @@ footer p {
     font-weight: bold;
 }
 
-#fruits-for-sale, #vegetables-for-sale {
+.figure-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -192,32 +192,37 @@ footer p {
 
 
 
-/*-------------------- MEDIA QUERY (medium) --------------------------------*/
 
-@media screen (min-width: 428px){
+
+@media screen and (min-width: 428px){
     main {
         display: grid;
     }
 }
 
-/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
 
 @media screen and (min-width: 834px){
 
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 30px;
+        display: block;
         width: 100%;
         margin: 0 auto;
     }
+
+    .figure-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }    
 
     nav ul {
         display: flex;
         flex-direction: row;
         max-width: 100%;
         margin: 0 auto;
+        justify-content: center;
+        align-items: center;
     }
 
     nav li {
@@ -225,23 +230,9 @@ footer p {
         flex: 1;
     }
 
-    #fruits {
-        grid-column: 1 / 2;
-    }
-
-    #fruits-for-sale {
-     
-    }
-
-    #vegetables {
-        grid-column: 2 / 3;
-    }
-
-    #vegetables-for-sale {
-       
-    }
-
   
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
 
 }
 
