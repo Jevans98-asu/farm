@@ -3,6 +3,7 @@ Add to your CSS Under Imported Fonts
 
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');*/
 
+/* -------------------- IMPORTED FONTS -------------------------------------- */
 
 @font-face {
     font-family: 'Habibi';
@@ -31,7 +32,7 @@ Add to your CSS Under Imported Fonts
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
-/* Global Styles */
+/*-------------------- CSS RESET -----------------------------------------------*/
 
 * {
     box-sizing: border-box;
@@ -39,55 +40,26 @@ Add to your CSS Under Imported Fonts
     margin: 0;
 }
 
-html {
-    background-color: #ffffff;
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+
+:root {
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
+    --font-primary: 'Habibi';
+    --font-secondary: 'Irish Grover';
 }
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 
 body {
     font-family: Habibi;
     font-size: 1.25em;
-}
-
-header, footer {
-    width: 100%;
-    background-color: #06A816;
-    color: #ffffff;
-    text-align: center;
-}
-
-nav ul {
-    background-color: #ffffff;
-    padding: 40px;
-}
-
-nav a {
-    color: #ffffff;
-    margin: 10px 40px;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-    background-color: #E75D02;
-    border-radius: 5px;
-
-}
-
-nav li {
-    list-style: none;
-    border: #ffffff;
-}
-
-footer p {
-    background-color: #ffffff;
-    color: #06A816;
-}
-
-header p {
-    font-style: italic;
-    padding-bottom: 20px;
+    background-color: var(--white);
 }
 
 h1, h2, h3 {
-    font-family: 'Irish Grover';
+    font-family: var(--font-secondary);
     padding: 10px;
 }
 
@@ -96,7 +68,7 @@ h1, h2, h3, p, img {
 }
 
 h1 {
-    text-shadow: 3px 3px #000000;
+    text-shadow: 3px 3px var(--black);
     font-size: 2.5em;
 }
 
@@ -104,27 +76,130 @@ h2 {
     font-size: 1.75em;
 }
 
+h3 {
+    font-size: 1.25em;
+}
+
 p {
     font-weight: bold;
 }
 
+header, footer {
+    width: 100%;
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+}
+
+header p {
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    padding: 20px;
+    gap: 10px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    display: block;
+    border: 2px solid var(--white);
+}
+
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.top a {
+    width: 100%;
+    padding: 15px;
+}
+
+/*REVISIT
+li:last-child .top {
+    position: fixed;
+    bottom: 20 px;
+    right: 20px;
+    padding: 10px 15px;
+    z-index: 1;
+}*/
+
+figure {
+    position: relative;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+    padding: 0;
+}
+
+figcaption::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250%;
+    height: 250%;
+    background-color: var(--black);
+    opacity: 0.75;
+    z-index: -1;
+}
+
+footer p {
+    background-color: #ffffff;
+    color: #06A816;
+}
+
 .secondary {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     text-align: center;
 }
 
-/* Media Queries */
 
-@media screen and (min-width: 428px){
-    nav ul {
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+
+@media screen (min-width: 428px){
+    main {
         display: grid;
     }
 }
 
-@media screen and (min-width: 834px){
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+
+@media screen and(min-width: 834px){
+
 }
 
 @media screen and (min-width: 1280px){
@@ -133,6 +208,8 @@ p {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 
 @media screen and (min-width: 1440px){
     main {

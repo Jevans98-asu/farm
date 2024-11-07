@@ -13,17 +13,17 @@
     <header>
         <h1>Fiona's Farm</h1>
         <p>Fresh from our farm to your family table</p>
-        <nav>
-            <ul>
-                <li><a href="#">Fruits</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="#">Top</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#fruits-section">Fruits</a></li>
+            <li><a href="#vegetables-section">Vegetables</a></li>
+            <li class="top"><a href="#top">Top</a></li>
+        </ul>
+    </nav>
     <main>
     <div class="initial">
-        <section class="primary">
+        <section id="section-grid">
             <h2>Fruits</h2>
             <p>
                 Welcome to our farm, where we take pride in growing a variety of delicious and nutritious fruits. Our
@@ -85,7 +85,7 @@
             </figure>
         </section>
     </div>
-    <div class="primary">
+    <div id="section-grid">
         <section>
             <h2>Vegetables</h2>
             <p>
@@ -98,11 +98,11 @@
         </section>
         <section class="secondary">
             <h3>Vegetables for Sale</h3>
-            <figure>
+            <figure class="grid-item1">
                 <img src="images/broccoli.png" alt="Broccoli">
                 <figcaption>Broccoli</figcaption>
             </figure>
-            <figure>
+            <figure class="grid-item2">
                 <img src="images/lettuce.png" alt="Lettuce">
                 <figcaption>Lettuce</figcaption>
             </figure>
@@ -152,18 +152,18 @@
 
 <footer>
     <div>
+        <h2>Contact</h2>
         <address>
-            <h2>Contact</h2>Contact<br>
             1234 Fake Street,<br>
             Mesa, AZ 85111<br>
             <a href="tel:+14805551234">(480) 555-1234</a><br>
         </address>
     </div>
     <div>
+        <h2>Hours</h2>
         <dl>
-            <dt><h2>Hours</h2></dt>
-            <dd>Monday Closed</dd>
-            <dd>Tuesday 6:00 AM - 2:00PM</dd>
+            <dt>Monday</dt><dd>Closed</dd>
+            <dt>Tuesday</dt><dd>6:00 AM - 2:00PM</dd>
             <dd>Wednesday 6:00 AM - 2:00PM</dd>
             <dd>Thursday 6:00 AM - 2:00PM</dd>
             <dd>Friday 6:00 AM - 9:00PM</dd>
