@@ -82,6 +82,7 @@ h3 {
 
 p {
     font-weight: bold;
+    padding: 10px;
 }
 
 header, footer {
@@ -103,10 +104,14 @@ nav ul {
     background-color: var(--white);
     padding: 20px;
     gap: 10px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 500px;
 }
 
 nav li {
     list-style: none;
+    width: 100%;
 }
 
 nav a {
@@ -116,9 +121,10 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
-    width: 300px;
+    width: 100%;
     display: block;
     border: 2px solid var(--white);
+    max-width: 500px;
 }
 
 .top {
@@ -126,21 +132,12 @@ nav a {
     bottom: 10px;
     right: 10px;
     z-index: 1;
+    width: auto;
 }
 
 .top a {
-    width: 100%;
-    padding: 15px;
+    padding: 10px 20px;
 }
-
-/*REVISIT
-li:last-child .top {
-    position: fixed;
-    bottom: 20 px;
-    right: 20px;
-    padding: 10px 15px;
-    z-index: 1;
-}*/
 
 figure {
     position: relative;
@@ -149,6 +146,8 @@ figure {
 
 img {
     width: 100%;
+    height: auto;
+    max-width: 500px;
 }
 
 figcaption {
@@ -167,19 +166,24 @@ figcaption::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250%;
+    width: 150px;
     height: 250%;
     background-color: var(--black);
     opacity: 0.75;
     z-index: -1;
 }
 
+footer {
+    padding-bottom: 0;
+}
+
 footer p {
     background-color: #ffffff;
     color: #06A816;
+    font-weight: bold;
 }
 
-.secondary {
+#fruits-for-sale, #vegetables-for-sale {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -198,7 +202,46 @@ footer p {
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 
-@media screen and(min-width: 834px){
+@media screen and (min-width: 834px){
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    nav li {
+        width: auto;
+        flex: 1;
+    }
+
+    #fruits {
+        grid-column: 1 / 2;
+    }
+
+    #fruits-for-sale {
+     
+    }
+
+    #vegetables {
+        grid-column: 2 / 3;
+    }
+
+    #vegetables-for-sale {
+       
+    }
+
+  
 
 }
 
