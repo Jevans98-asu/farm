@@ -195,6 +195,7 @@ footer p {
 
 
 @media screen and (min-width: 428px){
+    
     main {
         display: grid;
     }
@@ -205,7 +206,7 @@ footer p {
 @media screen and (min-width: 834px){
 
     main {
-        display: block;
+        display: grid;
         width: 100%;
         margin: 0 auto;
     }
@@ -221,9 +222,14 @@ footer p {
         flex-direction: row;
         max-width: 100%;
         margin: 0 auto;
-        justify-content: center;
         align-items: center;
     }
+
+    nav ul, .figure-grid{
+        width: 100%;
+        margin: 0 auto;
+    }
+
 
     nav li {
         width: auto;
@@ -237,19 +243,19 @@ footer p {
 }
 
 @media screen and (min-width: 1280px){
-    main {
-        display: grid;
+
+    .figure-grid {
         grid-template-columns: 1fr 1fr 1fr;
-    }
+    }  
 }
 
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 
 @media screen and (min-width: 1440px){
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+
+    .figure-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }  
 
 }
     
